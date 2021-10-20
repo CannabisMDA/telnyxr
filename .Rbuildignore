@@ -1,0 +1,5 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.covrignore$
+^LICENSE\.md$
+^README\.Rmd$

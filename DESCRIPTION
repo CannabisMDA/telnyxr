@@ -1,0 +1,18 @@
+Package: telnyxr
+Type: Package
+Title: An Interface to the Telnyx API for R
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Who", family = "Wrote It", email = "who@wrote.it", role = c("aut", "cre"))
+  )
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: `{telnyxr}` provides users a range of functions designed to communicate with Telnyx
+    API from R.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+    dplyr,
+    glue,
+    httr,
+    jsonlite
+RoxygenNote: 7.1.1
