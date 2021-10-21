@@ -37,22 +37,20 @@
 #'
 #' @export
 #'
-list_phone_numbers <- function(
-  page_number = 1,
-  page_size = 20,
-  filter_tag = NULL,
-  filter_phone_number = NULL,
-  filter_status = NULL,
-  filter_voice_connection_name_contains = NULL,
-  filter_voice_connection_name_starts_with = NULL,
-  filter_voice_connection_name_ends_with = NULL,
-  filter_voice_connection_name_eq = NULL,
-  filter_usage_payment_method = NULL,
-  filter_billing_group_id = NULL,
-  filter_emergency_address_id = NULL,
-  filter_customer_reference = NULL,
-  sort = NULL
-) {
+list_phone_numbers <- function(page_number = 1,
+                               page_size = 20,
+                               filter_tag = NULL,
+                               filter_phone_number = NULL,
+                               filter_status = NULL,
+                               filter_voice_connection_name_contains = NULL,
+                               filter_voice_connection_name_starts_with = NULL,
+                               filter_voice_connection_name_ends_with = NULL,
+                               filter_voice_connection_name_eq = NULL,
+                               filter_usage_payment_method = NULL,
+                               filter_billing_group_id = NULL,
+                               filter_emergency_address_id = NULL,
+                               filter_customer_reference = NULL,
+                               sort = NULL) {
   endpoint <- "phone_numbers?"
   page_number <- glue("page[number]={page_number}&")
   page_size <- glue("page[size]={page_size}&")
