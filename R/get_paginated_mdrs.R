@@ -33,27 +33,25 @@
 #'
 #' @export
 #'
-get_paginated_mdrs <- function(
-  start_date,
-  end_date,
-  page_number = 1,
-  page_size = 20,
-  sort = c("created_at"),
-  id = NULL,
-  direction = NULL,
-  outbound_profile_id = NULL,
-  cld = NULL,
-  cli = NULL,
-  status = NULL,
-  message_type = NULL,
-  country_iso = NULL,
-  error = NULL,
-  normalized_carrier = NULL,
-  tag = NULL,
-  mcc = NULL,
-  mnc = NULL,
-  product = NULL
-) {
+get_paginated_mdrs <- function(start_date,
+                               end_date,
+                               page_number = 1,
+                               page_size = 20,
+                               sort = c("created_at"),
+                               id = NULL,
+                               direction = NULL,
+                               outbound_profile_id = NULL,
+                               cld = NULL,
+                               cli = NULL,
+                               status = NULL,
+                               message_type = NULL,
+                               country_iso = NULL,
+                               error = NULL,
+                               normalized_carrier = NULL,
+                               tag = NULL,
+                               mcc = NULL,
+                               mnc = NULL,
+                               product = NULL) {
   endpoint <- "message_detail_records?"
   start_date <- glue('start_date={as.character(start_date, format = "%Y-%m-%dT%H:%M:%S%Z")}&')
   end_date <- glue('end_date={as.character(end_date, format = "%Y-%m-%dT%H:%M:%S%Z")}&')

@@ -1,19 +1,13 @@
-#' Send a message
+#' Send a long code message
 #'
-#' Send a message with a Phone Number, Alphanumeric Sender ID, Short Code or Number Pool.
-#' This endpoint allows you to send a message with any messaging resource. Current messaging
-#' resources include: long-code, short-code, number-pool, and alphanumeric-sender-id.
+#' Send a long code message.
 #'
+#' @param from string (address) Phone number, in +18665552367 format, used to send the message.
 #' @param to string (address) Receiving address (+18665552367 formatted phone number or short code).
 #'   Example: "+18665552367"
 #' @param text string Message body (i.e., content) as a non-empty string. **Required for SMS**
-#' @param from string (address) Sending address (+18665552367 formatted phone number, alphanumeric
-#'   sender ID, or short code). **Required if sending with a phone number, short code, or
-#'   alphanumeric sender ID.**
 #' @param media_urls array of string A list of media URLs. The total media size must be less than
 #'   1 MB. **Required for MMS**
-#' @param messaging_profile_id string Unique identifier for a messaging profile. **Required if
-#'   sending via number pool or with an alphanumeric sender ID.**
 #' @param subject string Subject of multimedia message.
 #' @param auto_detect boolean Automatically detect if an SMS message is unusually long and exceeds
 #'   a recommended limit of message parts.
@@ -33,24 +27,22 @@
 #'
 #' @export
 #'
-create_message <- function(to,
-                           text = NULL,
-                           from = NULL,
-                           media_urls = NULL,
-                           messaging_profile_id = NULL,
-                           subject = NULL,
-                           auto_detect = FALSE,
-                           type = NULL,
-                           use_profile_webhooks = TRUE,
-                           webhook_failover_url = NULL,
-                           webhook_url = NULL) {
-  endpoint <- "messages?"
+create_long_code_message <- function(from,
+                                     to,
+                                     text = NULL,
+                                     media_urls = NULL,
+                                     subject = NULL,
+                                     auto_detect = FALSE,
+                                     type = NULL,
+                                     use_profile_webhooks = TRUE,
+                                     webhook_failover_url = NULL,
+                                     webhook_url = NULL) {
+  endpoint <- "messages/long_code?"
   post_body <- list(
+    from = from,
     to = to,
     text = text,
-    from = from,
     media_urls = media_urls,
-    messaging_profile_id = messaging_profile_id,
     subject = subject,
     auto_detect = auto_detect,
     type = type,

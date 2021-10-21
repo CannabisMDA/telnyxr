@@ -37,23 +37,21 @@
 #'
 #' @export
 #'
-list_available_phone_numbers <- function(
-  filter_phone_number_starts_with = NULL,
-  filter_phone_number_ends_with = NULL,
-  filter_phone_number_contains = NULL,
-  filter_locality = NULL,
-  filter_administrative_area = NULL,
-  filter_country_code = NULL,
-  filter_national_destination_code = NULL,
-  filter_rate_center = NULL,
-  filter_phone_number_type = NULL,
-  filter_features = NULL,
-  filter_limit = NULL,
-  filter_best_effort = NULL,
-  filter_quickship = NULL,
-  filter_reservable = NULL,
-  filter_exclude_held_numbers = NULL
-) {
+list_available_phone_numbers <- function(filter_phone_number_starts_with = NULL,
+                                         filter_phone_number_ends_with = NULL,
+                                         filter_phone_number_contains = NULL,
+                                         filter_locality = NULL,
+                                         filter_administrative_area = NULL,
+                                         filter_country_code = NULL,
+                                         filter_national_destination_code = NULL,
+                                         filter_rate_center = NULL,
+                                         filter_phone_number_type = NULL,
+                                         filter_features = NULL,
+                                         filter_limit = NULL,
+                                         filter_best_effort = NULL,
+                                         filter_quickship = NULL,
+                                         filter_reservable = NULL,
+                                         filter_exclude_held_numbers = NULL) {
   endpoint <- "available_phone_numbers?"
   filter_phone_number_starts_with <- ifelse(
     is.null(filter_phone_number_starts_with),

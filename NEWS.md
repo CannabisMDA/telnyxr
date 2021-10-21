@@ -1,3 +1,12 @@
+# telnyxr 0.1.1
+
+## New functions
+
+  * `create_long_code_message`
+	* `create_number_pool_message`
+	* `create_short_code_message`
+	* `retrieve_message`
+
 # telnyxr 0.1.0
 
 * First `{telnyxr}` public version.
