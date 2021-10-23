@@ -3,9 +3,10 @@ Type: Package
 Title: An Interface to the Telnyx API for R
 Version: 0.1.1
 Authors@R: c(
-    person(given = "Who", family = "Wrote It", email = "who@wrote.it", role = c("aut", "cre"))
+    person("Juan Cruz", "Rodriguez", role = c("aut", "cre"), email = "jcrodriguez@unc.edu.ar"),
+    person(family = "Cannabis MDA", role = "cph")
   )
-Maintainer: The package maintainer <yourself@somewhere.net>
+Maintainer: Juan Cruz Rodriguez <jcrodriguez@unc.edu.ar>
 Description: `{telnyxr}` provides users a range of functions designed to communicate with Telnyx
     API from R.
 License: MIT + file LICENSE

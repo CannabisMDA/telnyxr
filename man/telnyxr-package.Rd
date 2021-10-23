@@ -9,6 +9,11 @@
 `{telnyxr}` provides users a range of functions designed to communicate with Telnyx API from R.
 }
 \author{
-\strong{Maintainer}: Who Wrote It \email{who@wrote.it}
+\strong{Maintainer}: Juan Cruz Rodriguez \email{jcrodriguez@unc.edu.ar}
+
+Other contributors:
+\itemize{
+  \item  Cannabis MDA [copyright holder]
+}
 
 }
