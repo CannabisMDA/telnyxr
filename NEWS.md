@@ -1,3 +1,9 @@
+# telnyxr 0.1.2
+
+## Bug fix
+
+  * Use time zone in MDR report.
+
 # telnyxr 0.1.1
 
 ## New functions

@@ -30,6 +30,7 @@
 #' @importFrom glue glue
 #' @importFrom httr add_headers content GET
 #' @importFrom jsonlite fromJSON
+#' @importFrom lubridate with_tz
 #'
 #' @export
 #'
@@ -53,8 +54,12 @@ get_paginated_mdrs <- function(start_date,
                                mnc = NULL,
                                product = NULL) {
   endpoint <- "message_detail_records?"
-  start_date <- glue('start_date={as.character(start_date, format = "%Y-%m-%dT%H:%M:%S%Z")}&')
-  end_date <- glue('end_date={as.character(end_date, format = "%Y-%m-%dT%H:%M:%S%Z")}&')
+  start_date <- glue(
+    'start_date={as.character(with_tz(start_date, "UTC"), format = "%Y-%m-%dT%H:%M:%S")}-00&'
+  )
+  end_date <- glue(
+    'end_date={as.character(with_tz(end_date, "UTC"), format = "%Y-%m-%dT%H:%M:%S")}-00&'
+  )
   page_number <- glue("page[number]={page_number}&")
   page_size <- glue("page[size]={page_size}&")
   sort <- paste0(glue("sort[]={sort}&"), collapse = "")

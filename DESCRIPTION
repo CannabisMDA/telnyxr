@@ -1,7 +1,7 @@
 Package: telnyxr
 Type: Package
 Title: An Interface to the Telnyx API for R
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person("Juan Cruz", "Rodriguez", role = c("aut", "cre"), email = "jcrodriguez@unc.edu.ar"),
     person(family = "Cannabis MDA", role = "cph")
@@ -15,5 +15,6 @@ Imports:
     dplyr,
     glue,
     httr,
-    jsonlite
+    jsonlite,
+    lubridate
 RoxygenNote: 7.1.1
